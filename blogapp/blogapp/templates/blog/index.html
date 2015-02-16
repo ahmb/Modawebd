@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block page_content %}
+<div class="jumbotron">
+<h1>Welcome to MODA {webdesign}!</h1>
+<p>The best in Web Design & Web Applications. Let todays technology help your business succeed..!!</p>
+<a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-search"></span> Search</a>
+</div>
+
+{% include "blog/_blogposts.html" %}
+ {% if talks %}
+<ul class="pager">
+    {% if pagination.has_prev %}
+    <li class="previous"><a href="{{ url_for('blog.index', page=pagination.prev_num) }}">&larr; Newer</a></li>
+    {% else %}
+    <li class="previous disabled"><a href="#">&larr; Newer</a></li>
+    {% endif %}
+    {% if pagination.has_next %}
+    <li class="next"><a href="{{ url_for('blog.index', page=pagination.next_num) }}">Older &rarr;</a></li>
+    {% else %}
+    <li class="next disabled"><a href="#">Older &rarr;</a></li>
+    {% endif %}
+</ul>
+{% endif %}
+{% endblock %}
