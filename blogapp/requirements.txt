@@ -20,3 +20,9 @@ blinker
 Flask-Mail
 Flask-Babel
 Coverage
+sqlalchemy-migrate
+flask-migrate
+python-dateutil==1.5
+Flask-HTTPAuth
+WhooshAlchemy
+Flask-WhooshAlchemy-Redux

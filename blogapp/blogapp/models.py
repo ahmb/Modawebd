@@ -10,7 +10,8 @@ from flask import request, current_app, url_for, jsonify, request, g
 from flask.ext.login import UserMixin
 from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
-from dateutil import parser as datetime_parser
+import dateutil
+#from dateutil import parser as datetime_parser
 from dateutil.tz import tzutc
 from flask.ext.httpauth import HTTPBasicAuth
 from .utils import split_url
